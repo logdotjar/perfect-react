@@ -1,7 +1,7 @@
-#React 완벽 가이드
+# React 완벽 가이드
 [강의 링크](https://www.udemy.com/course/best-react/)
 
-####배울 내용
+#### 배울 내용
 1. Javascript 의 장점을 극대화하는 React 개발방법론
 2. React hooks, 상태관리(Redux,Context API),Next js, TypeScript
 3. 리액티브 웹 앱의 성능을 향상시키는 법
