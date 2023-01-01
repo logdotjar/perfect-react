@@ -1,4 +1,4 @@
-#What is "Component"?
+# What is "Component"?
 <u>왜 리액트에서 중요한 개념일까?</u><br>
 **모든 사용자 인터페이스는 컴포넌트로 구성되어있기 때문이다.<br>(Because all use interfaces in the end are made up of components.)**
 <br>
@@ -35,7 +35,7 @@
 대부분의 리액트 컴포넌트는 HTML 과 Javasript 를 결합하는 것에 관한  것으로 CSS는 그 중요도가 상대적으로 낮다.<br>
 
 
-###리액트는 HTML과 Javascript 그리고 CSS로 구성된 재사용가능하고 반응하는 컴포넌트를 만들수 있게 한다.<br>
+### 리액트는 HTML과 Javascript 그리고 CSS로 구성된 재사용가능하고 반응하는 컴포넌트를 만들수 있게 한다.<br>
 (React allows you to create **re-usable and reactive components** consisting of **HTML and Javascript**(and CSS))
 <br>
 
@@ -49,7 +49,7 @@
 그리고 리액트는 이 모든 작업을 숨어서 처리한다.
 
 
-###Build your own, custom HTML Elements
+### Build your own, custom HTML Elements
 <u>리액트는 자신만의 HTML 요소를 만들고 결합해서 사용자 인터페이스를 구축할 수 있다.
 </u>
 
