@@ -13,7 +13,7 @@ import './ExpenseItem.css';
 * 매개변수(props)에 접근하고 그다음 title 프로퍼티로 이동.
 *
 * */
-function ExpenseItem(props){
+const ExpenseItem = (props) => {
     //정의된 Card.js를 컴포넌트로 미리정의된 스타일을 자동적으로 갖게한다.
     // 하지만 지정 컴포넌트를 컨텐츠를 감싸는 wrapper로 사용할 수 없다.
     return (
