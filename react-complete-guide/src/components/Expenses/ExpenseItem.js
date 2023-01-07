@@ -1,5 +1,5 @@
 import ExpenseDate from "./ExpensDate";
-import Card from "./Card";
+import Card from "../UI/Card";
 
 
 // 특정 파일이 있다고 알려야함 - CSS파일을 고려할수있도
