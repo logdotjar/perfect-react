@@ -29,12 +29,11 @@ function App() {
         },
     ];
 
-  return (
-    <div className="App">
-        <div className="expense"></div>
-        <Expense items={expense}/>
-    </div>
-  );
+    return (
+        <div className="App">
+            <Expense items={expense}/>
+        </div>
+    );
 }
 
 export default App;
