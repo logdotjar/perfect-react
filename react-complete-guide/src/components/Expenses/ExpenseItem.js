@@ -16,12 +16,21 @@ import './ExpenseItem.css';
 *
 * */
 const ExpenseItem = (props) => {
-    // 첫번째 : 현재 상태값 , 두번째요소 : 첫번째요소를 업데이트하는 함수
-    //title - 관리되고있는 값 props.title  초기값 , setTitle : 새로운 title을 설정하기 위해 호출할 함수
+    /*
+    * 첫번째 : 현재 상태값 , 두번째요소 : 첫번째요소를 업데이트하는 함수 - JS 구조분해할당
+    * title - 관리되고있는 값 props.title  초기값 , setTitle : 새로운 title을 설정하기 위해 호출할 함수
+    *
+    *
+    * 새로운 값 할당대신 clickHandler함수를 호출하는것은 어떤변수에 새로운값을 할당하는것이 아니라 이 특별한 변수로 시작하기 때문이고 ,  메모리 어딘가에서 리액트로 관리한다.
+    * 새로운 값만 받는것 뿐만아니라, 호출한 컴포넌트함수는 이 state를 업데이트하는 함수이다.
+    * 그리고 useState로 상태를 초기화했던곳에서 다시 실행한다.
+    * */
+
     const [title,setTitle] = useState(props.title);
 
     const clickHandler = () => {
-        console.log("clicked!")
+        setTitle('updated!');
+        console.log(title);
     }
 
 
