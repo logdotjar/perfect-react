@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 import ExpenseDate from "./ExpensDate";
 import Card from "../UI/Card";
 
@@ -14,6 +16,10 @@ import './ExpenseItem.css';
 *
 * */
 const ExpenseItem = (props) => {
+    // 첫번째 : 현재 상태값 , 두번째요소 : 첫번째요소를 업데이트하는 함수
+    //title - 관리되고있는 값 props.title  초기값 , setTitle : 새로운 title을 설정하기 위해 호출할 함수
+    const [title,setTitle] = useState(props.title);
+
     const clickHandler = () => {
         console.log("clicked!")
     }
@@ -26,7 +32,7 @@ const ExpenseItem = (props) => {
             <ExpenseDate date={props.date} />
 
             <div className="expense-item__description">
-                <h2>{props.title}</h2>
+                <h2>{title}</h2>
                 <div className="expense-item__price">
                     ${props.amount}
                 </div>
