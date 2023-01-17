@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import ExpenseDate from "./ExpensDate";
 import Card from "../UI/Card";
@@ -35,9 +35,6 @@ const ExpenseItem = (props) => {
     *
     * */
 
-    const [title,setTitle] = useState(props.title);
-
-
 
     //정의된 Card.js를 컴포넌트로 미리정의된 스타일을 자동적으로 갖게한다.
     // 하지만 지정 컴포넌트를 컨텐츠를 감싸는 wrapper로 사용할 수 없다.
@@ -46,7 +43,7 @@ const ExpenseItem = (props) => {
             <ExpenseDate date={props.date} />
 
             <div className="expense-item__description">
-                <h2>{title}</h2>
+                <h2>{props.title}</h2>
                 <div className="expense-item__price">
                     ${props.amount}
                 </div>
