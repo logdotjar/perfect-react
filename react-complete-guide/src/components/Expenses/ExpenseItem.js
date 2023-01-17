@@ -37,10 +37,6 @@ const ExpenseItem = (props) => {
 
     const [title,setTitle] = useState(props.title);
 
-    const clickHandler = () => {
-        setTitle('updated!');
-        console.log(title);
-    }
 
 
     //정의된 Card.js를 컴포넌트로 미리정의된 스타일을 자동적으로 갖게한다.
@@ -55,7 +51,6 @@ const ExpenseItem = (props) => {
                     ${props.amount}
                 </div>
             </div>
-            <button onClick={clickHandler}>change title</button>
         </Card>
     );
     //onClick={clickHandler()} 였다면 버튼이 눌릴때가 아닌 이 코드라분석될때 JS가 실행한다.
