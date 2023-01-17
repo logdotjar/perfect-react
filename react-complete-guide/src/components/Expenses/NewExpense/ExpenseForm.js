@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
 
     // state 반복대신 하나의 useState에 객체로 전달 -> 단, 개별 업데이트가 아니라 3개 모두 업데이트
     const [enteredTitle,setEnteredTitle] = useState('');
@@ -63,23 +63,28 @@ const ExpenseForm = () => {
             title:enteredTitle,
             amount:enteredAmount,
             data:new Date(enteredDate) // 날짜 문자열 분석해서 날짜 객체로 변
-        }
-        console.log(expenseData);
+        };
+
+        props.onSaveExpenseData(expenseData);
+
+        setEnteredTitle('');
+        setEnteredAmount('');
+        setEnteredDate('');
     };
 
     return <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
             <div className="new-expense__control">
                 <label>Title</label>
-                <input type="text" onChange={titleChangeHandler}/>
+                <input type="text" value={enteredTitle} onChange={titleChangeHandler}/>
             </div>
             <div className="new-expense__control">
                 <label>Amount</label>
-                <input type="number" min="0.01" step="0.01" onChange={amountChangeHandler}/>
+                <input type="number" min="0.01" step="0.01" value={enteredAmount} onChange={amountChangeHandler}/>
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type="date" min="2022-01-01" max="2023-12-31" onChange={dateChangeHanlder}/>
+                <input type="date" min="2022-01-01" max="2023-12-31" value={enteredDate} onChange={dateChangeHanlder}/>
             </div>
         </div>
         <div className="new-expense__actions">
