@@ -46,7 +46,7 @@ const ExpenseForm = (props) => {
         // });
     };
 
-    const dateChangeHanlder = (event) => {
+    const dateChangeHandler = (event) => {
         setEnteredDate(event.target.value);
 
         // setUserInput({
@@ -69,7 +69,7 @@ const ExpenseForm = (props) => {
 
         setEnteredTitle('');
         setEnteredAmount('');
-        setEnteredDate('');
+        // setEnteredDate('');
     };
 
     return <form onSubmit={submitHandler}>
@@ -84,7 +84,7 @@ const ExpenseForm = (props) => {
             </div>
             <div className="new-expense__control">
                 <label>Date</label>
-                <input type="date" min="2022-01-01" max="2023-12-31" value={enteredDate} onChange={dateChangeHanlder}/>
+                <input type="date" min="2022-01-01" max="2023-12-31" value={enteredDate} onChange={dateChangeHandler}/>
             </div>
         </div>
         <div className="new-expense__actions">
