@@ -61,7 +61,7 @@ const ExpenseForm = (props) => {
         //입력된 데이 폼이 제출되었을때 객체 형성
         const expenseData = {
             title:enteredTitle,
-            amount:enteredAmount,
+            amount:+enteredAmount,
             data:new Date(enteredDate) // 날짜 문자열 분석해서 날짜 객체로 변
         };
 
