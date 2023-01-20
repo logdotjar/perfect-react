@@ -39,16 +39,18 @@ const ExpenseItem = (props) => {
     //정의된 Card.js를 컴포넌트로 미리정의된 스타일을 자동적으로 갖게한다.
     // 하지만 지정 컴포넌트를 컨텐츠를 감싸는 wrapper로 사용할 수 없다.
     return (
-        <Card className="expense-item">
-            <ExpenseDate date={props.date} />
+        <li>
+            <Card className="expense-item">
+                <ExpenseDate date={props.date} />
 
-            <div className="expense-item__description">
-                <h2>{props.title}</h2>
-                <div className="expense-item__price">
-                    ${props.amount}
+                <div className="expense-item__description">
+                    <h2>{props.title}</h2>
+                    <div className="expense-item__price">
+                        ${props.amount}
+                    </div>
                 </div>
-            </div>
-        </Card>
+            </Card>
+        </li>
     );
     //onClick={clickHandler()} 였다면 버튼이 눌릴때가 아닌 이 코드라분석될때 JS가 실행한다.
 }
