@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
+//javascript tagged template literals
 const Button = styled.button`
     font: inherit;
     padding: 0.5rem 1.5rem;
